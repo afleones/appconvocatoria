@@ -9,7 +9,11 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
 import "../stylesheets/application"
-
+import "jquery"
+import "toastr"
+//= require bootstrap-datepicker
+// = requiere bootstrap-datepicker / locales / bootstrap-datepicker.es.js
+//= require jquery_ujs
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
