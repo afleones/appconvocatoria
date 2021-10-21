@@ -1,12 +1,4 @@
-<!-- Navigation-->
-<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-<nav id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-      <li class="sidebar-brand"><a href="#page-top">Menu de Opciones</a></li>
-      <li class="sidebar-nav-item"><a href="#page-top">Inicio</a></li>
-      <li class="sidebar-nav-item"><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
-  </ul>
-</nav>
+<%= render 'layouts/sidebar' %>
 <header class="masthead2 d-flex align-items-center">
     <div class="container px-4 px-lg-5 text-center">
         <h1 class="mb-1">mis datos de usuario:</h1>
@@ -17,7 +9,7 @@
       <div class="col-md-12 d-flex justify-content-center flex-wrap p-3">
       <!-- otros datos del parendiz -->
       <div class="col-md-12 d-flex flex-wrap align-content-center">
-        <table class="table">
+        <table class="table-bordered border-primary">
     <thead class="thead-dark">
       <tr>
         <th scope="col">id</th>
@@ -41,16 +33,34 @@
         <td><%=current_user.primer_apellido%> <%=current_user.segundo_apellido%></td>
         <td><%=current_user.fecha_de_nacimiento%></td>
         <td><%=current_user.edad%></td>
+
         <% if current_user.genero.blank? %>
         <td>nulo</td>
         <%else%>
         <td><%=current_user.genero.nombre%></td>
         <%end%>
+
         <td><%=current_user.email%></td>
         <td><%=current_user.unidad_academica%></td>
+
+        <% if current_user.nivel_postgrado.blank? %>
+        <td>nulo</td>
+        <%else%>
         <td><%=current_user.nivel_postgrado.nombre%></td>
+        <%end%>
+
+        <% if current_user.pais.blank? %>
+        <td>nulo</td>
+        <%else%>
         <td><%=current_user.pais%></td>
+        <%end%>
+
+        <% if current_user.programa_academico.blank? %>
+        <td>nulo</td>
+        <%else%>
         <td><%=current_user.programa_academico%></td>
+        <%end%>
+
         <td><%=current_user.nivel_ingles.nombre%></td>
 
       </tr>

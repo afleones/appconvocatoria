@@ -1,11 +1,3 @@
-<!-- Navigation-->
-<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-<nav id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-      <li class="sidebar-brand"><a href="#page-top">Menu de Opciones</a></li>
-      <li class="sidebar-nav-item"><%=link_to "Inicio", root_path%></li>
-  </ul>
-</nav>
 <!-- Header-->
 <header class="masthead3 d-flex align-items-center">
     <div class="container px-4 px-lg-5 text-center">
@@ -28,8 +20,7 @@
                       <%= f.input :primer_nombre,
                       autofocus: true,
                       label:false,
-                      required: true,
-                      input_html: {class: "form-control"  } %>
+                        input_html: {class: "form-control"  } %>
                     </div>
                     <div class="col-md-6 mb-4">
                       <label for="">Segundo nombre (si aplica)</label>
@@ -45,31 +36,45 @@
                       <%= f.input :primer_apellido,
                       autofocus: true,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control"  } %>
+                        input_html: {class: "form-control"  } %>
                     </div>
                       <div class="col-md-6 mb-4">
                         <label for="">Segundo apellido</label>
                         <%= f.input :segundo_apellido,
                         autofocus: true,
                         label: false,
-                        required: true,
-                        input_html: {class: "form-control"  } %>
+                            input_html: {class: "form-control"  } %>
                       </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <label for="">Tipo de documento</label>
+                      <%= f.association :tipo_documento,
+                      autofocus: true,
+                      label:false,
+                        label_method: :nombre,
+                      include_blank: "Seleccione una opcion",
+                      input_html: {class: "form-select"  } %>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <label for="">Documento de Identidad</label>
+                      <%= f.input :documento,
+                      autofocus: true,
+                      label: false,
+                      input_html: {class: "form-control"  } %>
+                    </div>
                   </div>
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <label for="">Fecha de nacimiento</label>
                     <%= f.date_field :fecha_de_nacimiento,
-                    required: true,
                     class: "form-control" %>
                   </div>
                   <div class="col-md-6 mb-4">
                     <label for="">Edad</label>
                       <%= f.input :edad,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control" } %>
+                        input_html: {class: "form-control" } %>
                   </div>
                 </div>
                 <div class="row">
@@ -79,15 +84,13 @@
                       label_method: :nombre,
                       include_blank: "Seleccione una opcion",
                       label: false,
-                      required: true,
-                      input_html: {class: "form-select"} %>
+                        input_html: {class: "form-select"} %>
                   </div>
                   <div class="col-md-6 mb-4">
                     <label for="">Unidad académica (Escuela, Area)</label>
                       <%= f.input :unidad_academica,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control" } %>
+                        input_html: {class: "form-control" } %>
                   </div>
                 </div>
                 <div class="row">
@@ -96,16 +99,14 @@
                       <%= f.association :nivel_postgrado,
                       include_blank: "Seleccione una opcion",
                       label: false,
-                      required: true,
-                      label_method: :nombre,
+                        label_method: :nombre,
                       input_html: {class: "form-select" } %>
                   </div>
                   <div class="col-md-6 mb-4">
                     <label for="">Programa academico</label>
                       <%= f.input :programa_academico,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control" } %>
+                        input_html: {class: "form-control" } %>
                   </div>
                 </div>
                  <div class="row">
@@ -113,16 +114,14 @@
                      <label for="">Universidad</label>
                        <%= f.input :universidad,
                        label: false,
-                       required: true,
-                       input_html: {class: "form-control" } %>
+                          input_html: {class: "form-control" } %>
                    </div>
                    <div class="col-md-6 mb-4">
                        <label for="">Pais</label>
                        <%= f.input :pais,
                        autofocus: true,
                        label:false,
-                       required: true,
-                       input_html: {class: "form-control"  } %>
+                          input_html: {class: "form-control"  } %>
                   </div>
                  </div>
                 <div class="row">
@@ -132,7 +131,6 @@
                     label: false,
                     label_method: :nombre,
                     include_blank: "Seleccione una opcion",
-                    required: true,
                     autofocus: true,
                     input_html: {class: "form-select" } %>
                   </div>
@@ -140,7 +138,6 @@
                     <label for="">Correo electrónico</label>
                     <%= f.input :email,
                     label: false,
-                    required: true,
                     autofocus: true,
                     autocomplete: "email",
                     input_html: {class: "form-control" } %>
@@ -152,7 +149,6 @@
                     <%= f.input :password,
                     autocomplete: "new-password",
                     label: false,
-                    required: true,
                     placeholder: "Minimo 6 caracteres",
                     input_html: {class: "form-control" } %>
                   </div>
@@ -161,7 +157,6 @@
                     <%= f.input :password_confirmation,
                     autocomplete: "new-password",
                     label: false,
-                    required: true,
                     input_html: {class: "form-control" } %>
                   </div>
                 </div>
@@ -170,16 +165,14 @@
                       <label for="">Historial academico</label>
                       <%= f.input :historial_academico,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control"} %>
+                        input_html: {class: "form-control"} %>
                       <p><%=render 'layouts/historial_academico'%></p>
                     </div>
                     <div class="col-md-6 mb-4">
                       <label for="">Certificado de nivel de ingles</label>
                       <%= f.input :certificado_ingles,
                       label: false,
-                      required: true,
-                      input_html: {class: "form-control"} %>
+                        input_html: {class: "form-control"} %>
                       <p><%=render 'layouts/certificado_ingles'%></p>
                     </div>
                   </div>
@@ -188,7 +181,6 @@
                     <label for="">Declaracion de no titularidad</label>
                     <%= f.input :declaracion,
                     label: false,
-                    required: true,
                     input_html: {class: "form-control"} %>
                     <p><%=render 'layouts/declaracion'%></p>
                   </div>
@@ -196,7 +188,6 @@
                     <label for="">Proyecto de investigacion</label>
                     <%= f.input :proyecto,
                     label: false,
-                    required: true,
                     input_html: {class: "form-control"} %>
                     <p><%=render 'layouts/proyecto'%></p>
                   </div>
@@ -206,7 +197,6 @@
                     <label for="">Ensayo motivacional</label>
                     <%= f.input :ensayo,
                     label: false,
-                    required: true,
                     input_html: {class: "form-control"} %>
                     <p><%=render 'layouts/ensayo'%></p>
                   </div>
@@ -214,21 +204,10 @@
                     <label for="">Certificado de admision a postgrado</label>
                     <%= f.input :certificado_admision,
                     label: false,
-                    required: true,
                     input_html: {class: "form-control"} %>
                     <p><%=render 'layouts/certificado_admision'%></p>
                   </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <label for="">Certificado de admision a postgrado</label>
-                      <%= f.input :carta_recomendacion,
-                      label: false,
-                      required: true,
-                      input_html: {class: "form-control"} %>
-                      <p><%=render 'layouts/carta_recomendacion'%></p>
-                    </div>
-                   </div>
                 <div class="row">
                      <%= f.submit "Registrar",
                      class: "btn btn-success btn-block" %>

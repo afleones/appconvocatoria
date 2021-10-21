@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_13_213105) do
+ActiveRecord::Schema.define(version: 2021_10_14_163418) do
 
   create_table "generos", charset: "utf8mb4", force: :cascade do |t|
     t.string "nombre"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 2021_10_13_213105) do
   end
 
   create_table "nivel_postgrados", charset: "utf8mb4", force: :cascade do |t|
+    t.string "nombre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tipo_documentos", charset: "utf8mb4", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,12 +68,14 @@ ActiveRecord::Schema.define(version: 2021_10_13_213105) do
     t.string "ensayo"
     t.string "certificado_admision"
     t.bigint "genero_id"
-    t.string "carta_recomendacion"
+    t.integer "documento"
+    t.bigint "tipo_documento_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["genero_id"], name: "index_users_on_genero_id"
     t.index ["nivel_ingles_id"], name: "index_users_on_nivel_ingles_id"
     t.index ["nivel_postgrado_id"], name: "index_users_on_nivel_postgrado_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["tipo_documento_id"], name: "index_users_on_tipo_documento_id"
   end
 
 end
