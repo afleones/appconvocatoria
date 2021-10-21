@@ -41,6 +41,13 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
 end
 
+group :production do
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
@@ -49,7 +56,7 @@ group :test do
   gem 'webdrivers'
 end
 
-# group :production do 
+# group :production do
 #   gem 'pg'
 # end
 
