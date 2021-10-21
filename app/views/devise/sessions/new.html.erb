@@ -1,0 +1,51 @@
+<div class="container-fluid ps-md-0">
+         <div class="row g-0">
+           <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+           <div class="col-md-8 col-lg-6">
+             <div class="login d-flex align-items-center">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-md-9 col-lg-8 mx-auto">
+                     <%=image_tag "logo_izquierda.png", class: "logo-unisinu" %>
+                     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div><%= f.label :email %><br />
+                            <%= f.email_field :email, class: "form-control" %></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div><%= f.label :password %><br />
+                            <%= f.password_field :password, class: "form-control" %></div>
+                          </div>
+                        </div>
+                        <div class="form-check form-switch">
+                          <% if devise_mapping.rememberable? -%>
+                            <div><%= f.check_box :remember_me, class:"form-check-input", id: "flexSwitchCheckDefault" %> <%= f.label :remember_me %></div>
+                          <% end %>
+                        </div>
+                        <div class="d-grid mb-1">
+                          <%= f.submit t('.sign_in', :default => "Sign in"), class: "boton" %>
+                          <% end %>
+                       </div>
+                        <div class="d-grid mb-1">
+                           <%= link_to "Registrarse", new_user_registration_path, class: "boton2" %>
+                        </div>
+                                  <!-- Footer -->
+                 <footer class="text-center text-lg-start bg-light text-muted">
+                   <!-- Copyright -->
+                   <div class="text-center p-4">
+                     © 2021 Desarrollado por:
+                     <a class="text-reset fw-bold" href="https://www.unisinucartagena.edu.co/">Dirección Académica</a>
+                   </div>
+                   <!-- Copyright -->
+                 </footer>
+                 <!-- Footer -->
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>

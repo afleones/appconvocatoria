@@ -11326,7 +11326,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: red;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -11408,7 +11408,7 @@ html {
 
 .callout {
   padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("bg-callout.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11463,7 +11463,7 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("portada.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11481,6 +11481,62 @@ footer.footer .social-link:hover {
     font-size: 5.5rem;
   }
 }
+
+.masthead2 {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.masthead2 h1, .masthead2 .h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .masthead2 {
+    height: 100vh;
+  }
+  .masthead2 h1, .masthead2 .h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.masthead3 {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: rgba(0, 0, 255, 0.1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.masthead3 h1, .masthead3 .h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .masthead3 {
+    height: 100vh;
+  }
+  .masthead3 h1, .masthead2 .h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
 
 .portfolio-item {
   display: block;
@@ -11556,4 +11612,73 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.logo-unisinu{
+  display: block;
+  margin: auto;
+}
+
+.login {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('portada.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+
+.boton{
+  background-color: red;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  border: 0;
+  font-family: sans-serif;
+}
+
+.boton2{
+  background-color: black;
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.boton2:hover{
+  color:white;
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.logo-unisinu{
+  display: block;
+  margin: auto;
+}
+
+.boton_form{
+  background-color: red;
+  padding: 20px;
+  border-radius: 1px;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+.boton_form:hover{
+  background-color: black;
+  color:white;
+  transform: scale(1.1);
+  transition: all 1s;
 }
