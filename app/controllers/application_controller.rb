@@ -31,7 +31,10 @@ class ApplicationController < ActionController::Base
                                                                  :proyecto,
                                                                  :password,
                                                                  :password_confirmation,
-                                                                 :genero_id)}
+                                                                 :genero_id,
+                                                                 :tipo_documento_id,
+                                                                 :documento,
+                                                                 :universidad)}
 
      devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:primer_nombre,
                                                                        :segundo_nombre,
@@ -54,7 +57,10 @@ class ApplicationController < ActionController::Base
                                                                        :proyecto,
                                                                        :password,
                                                                        :password_confirmation,
-                                                                       :genero_id)}
+                                                                       :genero_id,
+                                                                       :tipo_documento_id,
+                                                                       :documento,
+                                                                       :universidad)}
       end
 
    protected

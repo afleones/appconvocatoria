@@ -66,6 +66,9 @@ class UsersController < ApplicationController
                                 :ensayo,
                                 :historial_academico,
                                 :proyecto,
-                                :genero_id)
+                                :genero_id,
+                                :tipo_documento_id,
+                                :documento,
+                                :universidad)
  end
 end

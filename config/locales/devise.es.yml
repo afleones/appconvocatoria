@@ -1,0 +1,18 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            primer_nombre:
+              blank: no puede estar en blanco
+            primer_apellido:
+              blank: no puede estar en blanco
+            segundo_apellido:
+              blank: no puede estar en blanco
+            tipo_documento_id:
+              blank: no puede estar en blanco
+            documento:
+              blank: no puede estar en blanco
+            fecha_de_nacimiento:
+              blank: establezca fecha de nacimiento
